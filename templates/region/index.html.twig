@@ -8,9 +8,6 @@
         <tr>
             <th>Id</th>
             <th>Summary</th>
-            <th>Description</th>
-            <th>Capacity</th>
-            <th>Superficy</th>
             <th>Price</th>
             <th>Adress</th>
             <th>Region</th>
@@ -23,13 +20,10 @@
 
             <td>{{ room.id }}</td>
             <td>{{ room.summary }}</td>
-            <td>{{ room.description }}</td>
-            <td>{{ room.capacity }}</td>
-            <td>{{ room.superficy }}</td>
             <td>{{ room.price }}</td>
             <td>{{ room.address }}</td>
             <td>{% for region in room.regions %}{{ region.name }}{% endfor %}</td>
-            <td>show</td>
+          <td><a href="{{ path('rooms_properties', {'id': room.id}) }}">show</a></td>
 
         </tr>
     {% else %}
