@@ -5,8 +5,8 @@
 {% block body %}
 {% for region in regions %}
     <tr>
-        <td>{{ region.name }}</td>
-    
+        <td><a href="{{ path('rooms_list', {'id': region.id}) }}">{{ region.name }}</a></td>
+        <td>{{region.country}}</td>
     </tr>
 {% endfor %}
 {% endblock %}
