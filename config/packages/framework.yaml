@@ -1,7 +1,6 @@
 framework:
-
-assets:
-  	     base_path:'/startbootstrap-shop-homepage-gh-pages'
+    assets:
+         base_path: '/startbootstrap-agency-gh-pages'
 
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
