@@ -1,36 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RegionController!{% endblock %}
+{% block title %}Region index{% endblock %}
 
 {% block body %}
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Summary</th>
-            <th>Price</th>
-            <th>Adress</th>
-            <th>Region</th>
-            <td> &nbsp;</td>
-        </tr>
-    </thead>
-    <tbody>
-    {% for room in rooms %}
-        <tr>
+    <h1>Region index</h1>
 
-            <td>{{ room.id }}</td>
-            <td>{{ room.summary }}</td>
-            <td>{{ room.price }}</td>
-            <td>{{ room.address }}</td>
-            <td>{% for region in room.regions %}{{ region.name }}{% endfor %}</td>
-          <td><a href="{{ path('rooms_properties', {'id': room.id}) }}">show</a></td>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Presentation</th>
+                <th>Country</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for region in regions %}
+            <tr>
+                <td>{{ region.id }}</td>
+                <td>{{ region.name }}</td>
+                <td>{{ region.presentation }}</td>
+                <td>{{ region.country }}</td>
+                <td>
+                    <a href="{{ path('region_show', {'id': region.id}) }}">show</a>
+                    <a href="{{ path('region_edit', {'id': region.id}) }}">edit</a>
+                    {% if region.id in app.session.get('likes') %}
+                        <a href="{{ path('region_like', {'id': region.id}) }}"><i class="fas fa-heart"></i></a>
+                    {% else %}
+                        <a href="{{ path('region_like', {'id': region.id}) }}"><i class="far fa-heart"></i></a>
+                    {% endif %}
+                    {{ dump(app.session.get('likes')) }}
 
-        </tr>
-    {% else %}
-        <tr>
-            <td colspan="8">no rooms found</td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('region_new') }}">Create new</a>
 {% endblock %}
