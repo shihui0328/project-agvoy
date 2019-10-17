@@ -1,6 +1,6 @@
 framework:
     assets:
-         base_path: '/startbootstrap-agency-gh-pages'
+         base_path: '/travel'
 
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
