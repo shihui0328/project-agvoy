@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+{% for region in regions %}
+    <tr>
+        <td><a href="{{ path('rooms_list', {'id': region.id}) }}">{{ region.name }}</a></td>
+        <td>{{region.country}}</td>
+    </tr>
+{% endfor %}
+{% endblock %}

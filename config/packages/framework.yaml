@@ -1,4 +1,7 @@
 framework:
+    assets:
+         base_path: '/travel'
+
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
     #http_method_override: true
@@ -9,6 +12,7 @@ framework:
         handler_id: null
         cookie_secure: auto
         cookie_samesite: lax
+
 
     #esi: true
     #fragments: true
