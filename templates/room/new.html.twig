@@ -3,6 +3,7 @@
 {% block title %}New Room{% endblock %}
 
 {% block body %}
+{{parent()}}
     <h1>Create new Room</h1>
 
     {{ include('room/_form.html.twig') }}

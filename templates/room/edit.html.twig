@@ -3,6 +3,7 @@
 {% block title %}Edit Room{% endblock %}
 
 {% block body %}
+{{parent()}}
     <h1>Edit Room</h1>
 
     {{ include('room/_form.html.twig', {'button_label': 'Update'}) }}
