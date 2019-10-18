@@ -91,4 +91,32 @@ class RoomController extends AbstractController
 
         return $this->redirectToRoute('room_index');
     }
+
+    /**
+     * @Route("/{id}/like", name="room_like", methods={"GET"})
+     */
+    public function like(Room $room): Response
+    {
+        $likes = $this->get('session')->get('likes');
+        $id = $room->getId();
+
+        if (is_null($likes))
+        {
+            $likes = [];
+        }
+
+        if (! in_array($id, $likes) )
+        {
+            $likes[] = $id;  //Ajouter l'id de la room dans la liste likes
+        }
+        else
+        {
+            $likes = array_diff($likes, array($id));
+        }
+
+        $this->get('session')->set('likes', $likes);
+
+        return $this->redirectToRoute('room_index');
+    }
+
 }
