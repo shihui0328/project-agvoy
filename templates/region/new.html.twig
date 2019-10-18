@@ -3,6 +3,7 @@
 {% block title %}New Region{% endblock %}
 
 {% block body %}
+{{parent()}}
     <h1>Create new Region</h1>
 
     {{ include('region/_form.html.twig') }}
