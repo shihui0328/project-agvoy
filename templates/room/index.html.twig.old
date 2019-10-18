@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RoomController!{% endblock %}
+
+{% block body %}
+<table class="table">
+  <thead>
+      <tr>
+
+          <th>Description</th>
+          <th>Capacity</th>
+          <th>Superficy</th>
+          <th>Adress</th>
+          <th>Price</th>
+          <td> &nbsp;</td>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>{{ room.description }}</td>
+        <td>{{ room.capacity }}</td>
+        <td>{{ room.superficy }}</td>
+        <td>{{ room.address }}</td>
+        <td>{{ room.price }}</td>
+      </tr>
+  </tbody>
+</table>
+{% endblock %}
