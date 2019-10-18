@@ -32,7 +32,7 @@
                     <td>{{ room.price }}</td>
                     <td>{{ room.address }}</td>
                     <td>{% for region in room.regions %}{{ region.name }}{% endfor %}</td>
-                  <td><a href="{{ path('rooms_properties', {'id': room.id}) }}">show</a></td>
+                  <td><a href="{{ path('room_show', {'id': room.id}) }}">show</a></td>
 
                 </tr>
             {% else %}
