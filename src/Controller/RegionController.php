@@ -53,8 +53,12 @@ class RegionController extends AbstractController
      */
     public function show(Region $region): Response
     {
+        $rooms = $region->getRooms();
+        dump($rooms);
+
         return $this->render('region/show.html.twig', [
             'region' => $region,
+            'rooms' => $rooms,
         ]);
     }
 
@@ -100,7 +104,7 @@ class RegionController extends AbstractController
     {
         $likes = $this->get('session')->get('likes');
         $id = $region->getId();
-        
+
         if (is_null($likes))
         {
             $likes = [];
