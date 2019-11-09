@@ -43,6 +43,10 @@ class Region
         $this->rooms = new ArrayCollection();
     }
 
+    public function __toString() : String {
+        return "$this->name";
+    }
+
     public function getId(): ?int
     {
         return $this->id;
