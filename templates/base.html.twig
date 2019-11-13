@@ -41,19 +41,16 @@
                                     <a href="{{ path('home') }}" class="nav-link">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="about.html" class="nav-link">About</a>
+                                    <a href="{{ path('home') }}#Destination" class="nav-link">Destination</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="destination.html" class="nav-link">Destination</a>
+                                    <a href="{{ path('home') }}#Feedback" class="nav-link">Feedback</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact</a>
+                                    <a href="#contact" class="nav-link">Contact</a>
                                 </li>
                                 <li class="nav-item cta">
-                                    <a href="#" class="nav-link">Book Now</a>
+                                    <a href="region" class="nav-link">Book Now</a>
                                 </li>
                             </ul>
                         </div>
@@ -96,7 +93,7 @@
 
             {% endblock %}
 
-            <footer class="ftco-footer bg-bottom" style="background-image: url({{ asset('images/footer-bg.jpg') }});">
+            <footer id="contact" class="ftco-footer bg-bottom" style="background-image: url({{ asset('images/footer-bg.jpg') }});">
                 {%block footer %}
 
                     <div class="container">
@@ -125,7 +122,7 @@
                                 <div class="ftco-footer-widget mb-4 ml-md-5">
                                     <h2 class="ftco-heading-2">Infromation</h2>
                                     <ul class="list-unstyled">
-                                        <li>
+                                        <!-- <li>
                                             <a href="#" class="py-2 d-block">Online Enquiry</a>
                                         </li>
                                         <li>
@@ -139,9 +136,9 @@
                                         </li>
                                         <li>
                                             <a href="#" class="py-2 d-block">Refund Policy</a>
-                                        </li>
+                                        </li> -->
                                         <li>
-                                            <a href="#" class="py-2 d-block">Call Us</a>
+                                            <a href="#" class="py-2 d-block"> Second year engineer in Télécom SudParis</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -151,7 +148,7 @@
                                     <h2 class="ftco-heading-2">Experience</h2>
                                     <ul class="list-unstyled">
                                         <li>
-                                            <a href="#" class="py-2 d-block">Adventure</a>
+                                            <a href="{{ path('home') }}#Adventure" class="py-2 d-block">Adventure</a>
                                         </li>
                                         <li>
                                             <a href="#" class="py-2 d-block">Hotel and Restaurant</a>
