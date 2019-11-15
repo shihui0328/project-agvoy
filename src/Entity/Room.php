@@ -53,6 +53,11 @@ class Room
      */
     private $regions;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $bed;
+
     public function __construct()
     {
         $this->regions = new ArrayCollection();
@@ -162,5 +167,17 @@ class Room
     }
     public function __toString() {
         return (string) $this->getId();
+    }
+
+    public function getBed(): ?int
+    {
+        return $this->bed;
+    }
+
+    public function setBed(?int $bed): self
+    {
+        $this->bed = $bed;
+
+        return $this;
     }
 }
