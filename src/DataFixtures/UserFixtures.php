@@ -29,7 +29,7 @@ class UserFixtures extends Fixture
             $encodedPassword = $this->passwordEncoder->encodePassword($user, $plainPassword);
             $user->setEmail($email);
             $user->setPassword($encodedPassword);
-            $user->addRole($role);
+            $user->setRoles([$role]);
             $manager->persist($user);
         }
     }
