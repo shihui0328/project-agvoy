@@ -50,7 +50,11 @@
                                     <a href="#contact" class="nav-link">Contact</a>
                                 </li>
                                 <li class="nav-item cta">
-                                    <a href="region" class="nav-link">Book Now</a>
+                                    {%if app.user%}
+                                    <a href="{{path('app_logout')}}" class="nav-link">Logout</a>
+                                    {% else %}
+                                    <a href="{{path('app_login')}}" class="nav-link">Login</a>
+                                    {% endif%}
                                 </li>
                             </ul>
                         </div>
