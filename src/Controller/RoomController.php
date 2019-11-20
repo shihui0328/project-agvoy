@@ -27,6 +27,7 @@ class RoomController extends AbstractController
 
     /**
      * @Route("/new", name="room_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
      */
     public function new(Request $request): Response
     {
@@ -60,6 +61,7 @@ class RoomController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="room_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
      */
     public function edit(Request $request, Room $room): Response
     {
@@ -80,6 +82,7 @@ class RoomController extends AbstractController
 
     /**
      * @Route("/{id}", name="room_delete", methods={"DELETE"})
+     * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Request $request, Room $room): Response
     {
