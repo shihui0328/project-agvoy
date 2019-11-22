@@ -53,9 +53,9 @@
                                     </div>
                                     <div class="col-1">
                                         {% if room.id in app.session.get('likes') %}
-                                        <a href="{{ path('room_like', {'id': room.id}) }}"><i class="fas fa-heart"></i></a>
+                                        <a href="{{ path('room_like', {'id': room.id}) }}?next_page=room_index"><i class="fas fa-heart"></i></a>
                                         {% else %}
-                                        <a href="{{ path('room_like', {'id': room.id}) }}"><i class="far fa-heart"></i></a>
+                                        <a href="{{ path('room_like', {'id': room.id}) }}?next_page=room_index"><i class="far fa-heart"></i></a>
                                         {% endif %}
                                     </div>
                                 </div>
