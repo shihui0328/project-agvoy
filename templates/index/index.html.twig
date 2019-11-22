@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="search-wrap-1 ftco-animate p-4">
+                <!-- <div class="search-wrap-1 ftco-animate p-4">
                     <form action="#" class="search-property-1">
                         <div class="row">
                             <div class="col-lg align-items-end">
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -97,12 +97,9 @@
 <section class="ftco-section services-section bg-light">
     <div class="container">
         <div class="row d-flex">
-            <div id="Adventure" class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate">
-                <h2 class="mb-4">It's time to start your adventure</h2>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-                    A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p>
+            <div id="Adventure" class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate m-auto">
+                <h1 class="mb-4 ">It's time to start your adventure</h1><br><br>
+                <p><a href="{{ path('region_index') }}" class="btn btn-primary py-3 px-4">Search Destination</a></p>
             </div>
             <div class="col-md-6">
                 <div class="row">
@@ -111,7 +108,7 @@
                             <div class="icon"><span class="flaticon-paragliding"></span></div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">Activities</h3>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                                <p> Multi-day trips led by local experts—activities, meals, and stays included </p>
                             </div>
                         </div>
                     </div>
@@ -120,7 +117,7 @@
                             <div class="icon"><span class="flaticon-route"></span></div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">Travel Arrangements</h3>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                                <p>Your butler who can helps you plan the tour</p>
                             </div>
                         </div>
                     </div>
@@ -129,7 +126,7 @@
                             <div class="icon"><span class="flaticon-tour-guide"></span></div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">Private Guide</h3>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                                <p>A private free guide who can gives you the best service</p>
                             </div>
                         </div>
                     </div>
@@ -138,7 +135,7 @@
                             <div class="icon"><span class="flaticon-map"></span></div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">Location Manager</h3>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                                <p>One of the most authentic travel plans to make your trip more exciting</p>
                             </div>
                         </div>
                     </div>
@@ -147,7 +144,7 @@
         </div>
     </div>
 </section>
-<section class="ftco-counter img" id="section-counter">
+<section class="ftco-counter img m-auto" id="section-counter">
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-6 d-flex">
@@ -157,7 +154,6 @@
                 <div class="row justify-content-start pb-3">
                     <div class="col-md-12 heading-section ftco-animate">
                         <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -198,9 +194,10 @@
             </div>
         </div>
         <div class="row">
+
             <div class="col-md-3 ftco-animate">
                 <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/place-1.jpg') }});">
+                    <a  href="{{ path('region_index') }}" class="img" style="background-image: url({{ asset('images/place-1.jpg') }});">
                         <div class="text">
                             <h3>Singapore</h3>
                             <span>8 Tours</span>
@@ -210,7 +207,7 @@
             </div>
             <div class="col-md-3 ftco-animate">
                 <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/place-2.jpg') }});">
+                    <a  href="{{ path('region_index') }}" class="img" style="background-image: url({{ asset('images/place-2.jpg') }});">
                         <div class="text">
                             <h3>Canada</h3>
                             <span>2 Tours</span>
@@ -220,7 +217,7 @@
             </div>
             <div class="col-md-3 ftco-animate">
                 <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/place-3.jpg') }});">
+                    <a  href="{{ path('region_index') }}"class="img" style="background-image: url({{ asset('images/place-3.jpg') }});">
                         <div class="text">
                             <h3>Thailand</h3>
                             <span>5 Tours</span>
@@ -230,7 +227,7 @@
             </div>
             <div class="col-md-3 ftco-animate">
                 <div class="project-destination">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/place-4.jpg') }});">
+                    <a  href="{{ path('region_index') }}" class="img" style="background-image: url({{ asset('images/place-4.jpg') }});">
                         <div class="text">
                             <h3>Autralia</h3>
                             <span>5 Tours</span>
@@ -249,9 +246,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 ftco-animate">
+            <div class="col-md-4 ftco-animate ">
                 <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/destination-1.jpg') }});"></a>
+                    <a  href="{{ path('room_index') }}" class="img" style="background-image: url({{ asset('images/destination-1.jpg') }});"></a>
                     <div class="text p-4">
                         <span class="price">$300/person</span>
                         <span class="days">8 Days Tour</span>
@@ -267,7 +264,7 @@
             </div>
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/destination-2.jpg') }});"></a>
+                    <a href="{{ path('room_index') }}" class="img" style="background-image: url({{ asset('images/destination-2.jpg') }});"></a>
                     <div class="text p-4">
                         <span class="price">$300/person</span>
                         <span class="days">10 Days Tour</span>
@@ -283,7 +280,7 @@
             </div>
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/destination-3.jpg') }});"></a>
+                    <a href="{{ path('room_index') }}" class="img" style="background-image: url({{ asset('images/destination-3.jpg') }});"></a>
                     <div class="text p-4">
                         <span class="price">$300/person</span>
                         <span class="days">7 Days Tour</span>
@@ -299,7 +296,7 @@
             </div>
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/destination-4.jpg') }});"></a>
+                    <a href="{{ path('room_index') }}" class="img" style="background-image: url({{ asset('images/destination-4.jpg') }});"></a>
                     <div class="text p-4">
                         <span class="price">$300/person</span>
                         <span class="days">8 Days Tour</span>
@@ -315,7 +312,7 @@
             </div>
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap">
-                    <a href="#" class="img" style="background-image: url({{ asset('images/destination-5.jpg') }});"></a>
+                    <a href="{{ path('room_index') }}" class="img" style="background-image: url({{ asset('images/destination-5.jpg') }});"></a>
                     <div class="text p-4">
                         <span class="price">$300/person</span>
                         <span class="days">10 Days Tour</span>
@@ -348,7 +345,7 @@
         </div>
     </div>
 </section>
-<section id="Feedback" class="ftco-section testimony-section bg-bottom" style="background-image: url({{ asset('images/bg_3.jpg') }});">
+<!-- <section id="Feedback" class="ftco-section testimony-section bg-bottom" style="background-image: url({{ asset('images/bg_3.jpg') }});">
     <div class="container">
         <div class="row justify-content-center pb-4">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -432,8 +429,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="ftco-section">
+</section> -->
+<!-- <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center pb-4">
             <div class="col-md-12 heading-section text-center ftco-animate">
@@ -500,6 +497,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 {% endblock %}
