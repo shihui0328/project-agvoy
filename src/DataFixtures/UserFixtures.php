@@ -10,12 +10,12 @@ use App\Entity\User;
 class UserFixtures extends Fixture
 {
          private $passwordEncoder;
-    
+
          public function __construct(UserPasswordEncoderInterface $passwordEncoder)
          {
              $this->passwordEncoder = $passwordEncoder;
         }
-        
+
     public function load(ObjectManager $manager)
     {
         $this->LoadUsers($manager);
@@ -33,11 +33,11 @@ class UserFixtures extends Fixture
             $manager->persist($user);
         }
     }
-    
+
     private function getUserData()
     {
         yield ['chris@localhost','chris','ROLE_USER'];
-        yield ['anna@localhost','anna','ROLE_ADMIN'];
+        yield ['admin@localhost','admin','ROLE_ADMIN'];
         
     }
 }
