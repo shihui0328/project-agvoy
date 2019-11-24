@@ -27,6 +27,18 @@ class RoomController extends AbstractController
     }
 
     /**
+     * @Route("/likes", name="room_likes_index", methods={"GET"})
+     */
+    public function Likes(RoomRepository $roomRepository): Response
+    {
+        $likes = $this->get('session')->get('likes');
+
+        return $this->render('room/likes.html.twig', [
+            'rooms' => $roomRepository->findById($likes),
+        ]);
+    }
+
+    /**
      * @Route("/new", name="room_new", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
