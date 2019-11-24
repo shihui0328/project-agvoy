@@ -1,4 +1,91 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+<div>
+    <div class="form-group col-4">
+        {{form_label(form.summary)}}
+        {{ form_widget(form.summary,{"attr":{"class":"form-control"}}) }}
+        {%if not form.summary.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.summary)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.description)}}
+        {{ form_widget(form.description,{"attr":{"class":"form-control"}}) }}
+        {%if not form.description.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.description)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.capacity)}}
+        {{ form_widget(form.capacity,{"attr":{"class":"form-control"}}) }}
+        {%if not form.capacity.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.capacity)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.bed)}}
+        {{ form_widget(form.bed,{"attr":{"class":"form-control"}}) }}
+        {%if not form.bed.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.bed)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.superficy)}}
+        {{ form_widget(form.superficy,{"attr":{"class":"form-control"}}) }}
+        {%if not form.superficy.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.superficy)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.price)}}
+        {{ form_widget(form.price,{"attr":{"class":"form-control"}}) }}
+        {%if not form.price.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.price)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.address)}}
+        {{ form_widget(form.address,{"attr":{"class":"form-control"}}) }}
+        {%if not form.address.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.address)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.regions)}}
+        {{ form_widget(form.regions,{"attr":{"class":"form-control"}}) }}
+        {%if not form.regions.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.regions)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.imageName)}}
+        {{ form_widget(form.imageName,{"attr":{"class":"form-control"}}) }}
+        {%if not form.imageName.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.imageName)}}</small>
+        {%endif%}
+    </div>
+
+    <div class="form-group col-4">
+        {{form_label(form.imageFile)}}
+        {{ form_widget(form.imageFile,{"attr":{"class":"form-control"}}) }}
+        {%if not form.imageFile.vars.valid%}
+        <small class="form-text text-danger">{{form_errors(form.imageFile)}}</small>
+        {%endif%}
+    </div>
+
+
+
+
+
+
+</div>
+<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+
 {{ form_end(form) }}

@@ -24,7 +24,7 @@
                     {% for room in rooms %}
                     <div class="col-md-4 ftco-animate">
                         <div class="project-wrap">
-                            <a href="{{ path('room_show', {'id': room.id}) }}" class="img" style="background-image: url({{ asset('images/destination-6.jpg') }});"></a>
+                            <a href="{{ path('room_show', {'id': room.id}) }}" class="img" style="background-image: url({% if vich_uploader_asset(room, 'imageFile') %}{{ vich_uploader_asset(room, 'imageFile') }}{% else %}'https://source.unsplash.com/random/?room,{{room.id}}'{% endif %});"></a>
 
                             <div class="text p-4">
                                 <span class="price">{{ room.price }} $ / day</span>
@@ -35,9 +35,9 @@
                                     </div>
                                     <div class="col-1">
                                         {% if room.id in app.session.get('likes') %}
-                                        <a href="{{ path('room_like', {'id': room.id}) }}"><i class="fas fa-heart"></i></a>
+                                        <a href="{{ path('room_like', {'id': room.id}) }}?next_page=region_show&room_number={{ region.id }}"><i class="fas fa-heart"></i></a>
                                         {% else %}
-                                        <a href="{{ path('room_like', {'id': room.id}) }}"><i class="far fa-heart"></i></a>
+                                        <a href="{{ path('room_like', {'id': room.id}) }}?next_page=region_show&room_number={{ region.id }}"><i class="far fa-heart"></i></a>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -110,7 +110,9 @@
 
 <a href="{{ path('region_index') }}">back to list</a>
 
+{% if is_granted('ROLE_ADMIN') %}
 <a href="{{ path('region_edit', {'id': region.id}) }}">edit</a>
 
 {{ include('region/_delete_form.html.twig') }}
+{%endif%}
 {% endblock %}
