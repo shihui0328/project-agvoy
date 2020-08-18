@@ -1,4 +1,4 @@
-```bash
+
 
 ## DEMO
 ![image](https://github.com/shihui0328/agvoy/blob/master/demo/demo-agvoy.gif)
@@ -15,4 +15,3 @@ bin/console doctrine:schema:create
 
 # Loading test data
 bin/console doctrine:fixtures:load
-```
